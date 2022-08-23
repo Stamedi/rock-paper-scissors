@@ -14,7 +14,9 @@ function App() {
     { num: 1, name: "ROCK" },
     { num: 2, name: "PAPER" },
     { num: 3, name: "SCISSORS" }]
+
   let randomNumGen = Math.floor((Math.random() * 3) + 1)
+
   useEffect(() => {
     if (currentMove === 1) {
       if (currentMove === randomNumGen) {
@@ -56,7 +58,9 @@ function App() {
         setWin(win + 1)
       }
     }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[currentMove])
+
   useEffect(() => {
     if (win === 3 || loss === 3) {
       setFinalRes(true)
