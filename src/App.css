@@ -37,17 +37,21 @@ body {
 
 .container,
 .container-2 {
+    /* @media (max-width: 600px) {
+        width: 100%;
+        padding: 20px;
+    } */
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     background-color: #fffaff;
     border-radius: 40px;
-    width: 600px;
+    max-width: 600px;
+    height: auto;
     padding: 0 50px 50px 50px;
     animation: drop-container 1.5s;
 }
-
 @keyframes drop-container {
     0% {
         transform: translateY(-1000px);
@@ -62,9 +66,17 @@ body {
 }
 
 .logo {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     transform: translateY(-100px);
 }
+
+/* @media (max-width:600px) {
+    .logo {
+        transform: translateY(-50px);
+    }
+    
+} */
 
 .vs-container {
     display: flex;
@@ -81,6 +93,7 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
 .you {
     color: #45e9ff;
 }
@@ -90,11 +103,11 @@ body {
     color: #ff30d6;
 }
 
-.res-container {
+/* .res-container {
     position: relative;
     display: block;
     text-align: center;
-}
+} */
 
 .result {
     text-align: center;
@@ -154,3 +167,44 @@ button:active,
     text-align: center;
     margin-bottom: 40px;
 }
+
+@media (max-width: 600px) {
+    .vs-container {
+        font-size: 20px;
+        transform: translateY(-50px);
+    }
+    .logo {
+        transform: translateY(-25px);
+    }
+
+    .container,
+    .container-2 {
+        padding: 0 20px 20px 20px;
+    }
+
+    .round-container {
+        font-size: 50px;
+        justify-content: space-around;
+    }
+    .result {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    button,
+    .restart-btn {
+        padding: 10px 12px;
+    }
+
+    .choise-container {
+        transform: translateX(10px);
+    }
+
+    .container-2 > h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+
