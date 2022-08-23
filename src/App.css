@@ -45,7 +45,16 @@ body {
     border-radius: 40px;
     width: 600px;
     padding: 0 50px 50px 50px;
+    animation: drop-container 1.5s;
+}
 
+@keyframes drop-container {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .container-2 {
@@ -102,25 +111,36 @@ body {
     margin-top: 40px;
 }
 
-button {
+button,
+.restart-btn 
+{
     padding: 20px 30px;
     border: 5px solid #456de4;
     background: #45e9ff;
     border-radius: 15px;
     color: #456de4;
+    box-shadow: inset 0 0 0 0 #456de4;
+    transition: ease-out 0.3s;
 }
 
-button:hover {
+button:hover,
+.restart-btn:hover 
+ {
+    box-shadow: inset 180px 0 0 0 #456de4;
     cursor: pointer;
     background: #456de4;
     border: 5px solid #45e9ff;
     color: #fffaff;
 }
 
-button:active {
-    background-color: #ff30d6;
-    color: #fffaff;
+button:active,
+.restart-btn:active 
+{
     border: 5px solid #456de4;
+}
+
+.restart-btn:hover {
+    box-shadow: inset 600px 0 0 0 #456de4;
 }
 
 .choise-container {

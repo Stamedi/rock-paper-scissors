@@ -99,7 +99,7 @@ if (!finalRes) {
   return (
     <div className="container-2">
       {win === 3 ? <h1 className="you">YOU WON</h1> : <h1 className="ai">YOU LOST</h1>}
-      <button onClick={() => resetGame()}>RESTART</button>
+      <button className="restart-btn" onClick={() => resetGame()}>RESTART</button>
     </div>
   )
 }
